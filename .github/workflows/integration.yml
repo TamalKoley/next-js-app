@@ -39,6 +39,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: "Test cases Check"
-    - run: npm i
-    - run: npm run test
+      run: npm i
+      run: npm run test
 

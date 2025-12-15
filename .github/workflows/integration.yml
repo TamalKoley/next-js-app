@@ -22,9 +22,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name:"Build Check"
-    - run: npm i
-    - run: npm run build
+    - name: "Installing dependencies and build"
+      run: npm i
+      run: npm run build
 
   Test:
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name:"Test cases Check"
+    - name: "Test cases Check"
     - run: npm i
     - run: npm run test
 
